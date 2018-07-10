@@ -2,7 +2,7 @@ from flask import Flask, jsonify, request, render_template
 from model.expense import Expense, ExpenseSchema
 from model.income import Income, IncomeSchema
 from model.transaction_type import TransactionType
-import datetime
+import datetime, os
 app = Flask(__name__)
 
 transactions = [
@@ -67,4 +67,6 @@ def add_expense():
 
 	
 if __name__ == "__main__":
-	app.run()
+	# Bind to PORT if defined, otherwise default to 5000.
+	port = int(os.environ.get('PORT', 5000))
+	app.run(host='0.0.0.0', port=port)
