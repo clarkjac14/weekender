@@ -1,29 +1,19 @@
 <!DOCTYPE html>
 <html>
-    <style>
-        body
-        {
-            font-family: "Courier New";
-            background-color: #505050;
-        }
-        p
-        {
-            color: #cccccc;
-        }
-    </style>
     
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta charset="UTF-8">
         
-        <!-- Core Bootstrap -->
+        <!-- Core Bootstrap 
         <link rel="stylesheet" href="css/bootstrap.min.css">
+        -->
         
         <!-- Custom Styles -->
-        <link rel="stylesheet" href="css/styles.css">
+        <link rel= "stylesheet" href= "{{ url_for('static', filename='styles/styles.css') }}">
         
         <title>Cashman</title>
-        <link rel="shortcut icon" href="#"> 
+        <link rel="shortcut icon" href="#">
     </head>
     
     <body>
@@ -33,6 +23,5 @@
         
         <img src="http://mattrichardson.com/images/flask.png" alt="flask logo">
         
-        <p>hey Gina ily :)</p>
     </body>
 </html>
