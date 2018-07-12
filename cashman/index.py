@@ -12,7 +12,7 @@ transactions = [
 	Expense('Rock Concert', 100)
 ]
 
-date = datetime.datetime.today().strftime('%A, %B %-m')
+date = datetime.datetime.today().strftime('%A, %B %-d')
 
 @app.route('/')
 def index():
