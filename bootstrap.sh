@@ -1,4 +1,3 @@
-#!/bin/sh
-export FLASK_APP=./cashman/index.py
-source ./venv/bin/activate
+export FLASK_APP=weekender.py
+source ./env/bin/activate
 flask run -h 0.0.0.0

@@ -1,1 +1,1 @@
-web: python3 cashman/index.py
+web: ./bootstrap.sh

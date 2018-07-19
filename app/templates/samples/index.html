@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+        
+        <!-- Core Bootstrap 
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        -->
+        
+        <!-- Custom Styles -->
+        <link rel= "stylesheet" href= "{{ url_for('static', filename='styles/styles.css') }}">
+        
+        <title>Weekender</title>
+        <link rel="shortcut icon" href="#">
+    </head>
+    
+    <body>
+        {% block navbar %}
+        <div class="container">
+            <div class="navbar navbar-fixed-top navbar-inverse">
+                <div class="collapse navbar-collapse">
+                    <ul>
+                        <li>a</li>
+                        <li>b</li>
+                        <li>c</li>
+                        <li>d</li>
+                        <li>e</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        {% endblock %}
+        <p>Today is: {{ Today }}</p>
+        
+        <img src="/static/lacroix.gif" alt="flask logo">
+        
+    </body>
+</html>

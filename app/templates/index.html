@@ -1,0 +1,41 @@
+{% extends 'bootstrap/base.html' %}
+
+
+
+{% block metas %}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+{% endblock %}
+
+{% block title %}
+    Weekender
+{% endblock %}
+
+{% block styles %}
+    {{super()}}
+        <link rel= "stylesheet" 
+            href= "{{ url_for('static', filename='styles/styles.css') }}">
+{% endblock %}
+
+
+
+{% block body %}
+    
+    {% include 'navbar.html' %}
+    
+    <div class="container-fluid">
+        {% block content%}
+        <div class="jumbotron">
+            <h2>{{ Today }} </h2>
+            <h3>what's your weekend looking like?</h3>
+            <p>
+                drop your name and availability
+            </p>
+        </div>
+        {% endblock %}
+    </div>
+    
+    {% include 'footer.html' %}
+    
+{% endblock %}
+
