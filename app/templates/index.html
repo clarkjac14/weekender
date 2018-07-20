@@ -31,6 +31,27 @@
             <p>
                 drop your name and availability
             </p>
+            
+            <form action="" method="post" novalidate>
+                {{ form.hidden_tag() }}
+                <p>
+                    {{ form.name.label }}<br>
+                    {{ form.name(size=32) }}
+                </p>
+                <p>
+                    {{ form.friday.label }}<br>
+                    {{ form.friday() }}
+                </p>
+                <p>
+                    {{ form.saturday.label }}<br>
+                    {{ form.saturday() }}
+                </p>
+                <p>
+                    {{ form.sunday.label }}<br>
+                    {{ form.sunday() }}
+                </p>
+                <p>{{ form.submit() }}</p>
+            </form>
         </div>
         {% endblock %}
     </div>
