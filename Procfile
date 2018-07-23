@@ -1,1 +1,1 @@
-web: ./bootstrap.sh
+web: gunicorn --preload weekender:app

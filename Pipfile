@@ -9,6 +9,8 @@ flask-bootstrap = "*"
 flask-wtf = "*"
 gunicorn = "*"
 requests = "*"
+flask-migrate = "*"
+flask-sqlalchemy = "*"
 
 [dev-packages]
 
