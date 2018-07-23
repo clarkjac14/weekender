@@ -24,7 +24,7 @@
     {% include 'navbar.html' %}
     
     <div class="container-fluid">
-        {% block content%}
+        {% block content %}
         <div class="jumbotron">
             <h2>{{ Today }} </h2>
             <h3>what's your weekend looking like?</h3>
@@ -32,11 +32,16 @@
                 drop your name and availability
             </p>
             
+            {% include 'flash.html' %}
+            
             <form action="" method="post" novalidate>
                 {{ form.hidden_tag() }}
                 <p>
                     {{ form.name.label }}<br>
-                    {{ form.name(size=32) }}
+                    {{ form.name(size=32) }}<br>
+                    {% for error in form.name.errors %}
+                        <span style="color: red;">[{{ error }}]</span>
+                    {% endfor %}
                 </p>
                 <p>
                     {{ form.friday.label }}<br>

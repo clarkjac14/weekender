@@ -11,4 +11,6 @@ def index():
 	if form.validate_on_submit():
 		flash('Thank you for submitting, {}.'.format(form.name.data))
 		return redirect('/')
+	else:
+		flash('Something went wrong!')
 	return render_template('index.html', Today=date, form=form)
