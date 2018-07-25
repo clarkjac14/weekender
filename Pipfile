@@ -11,6 +11,7 @@ gunicorn = "*"
 requests = "*"
 flask-migrate = "*"
 flask-sqlalchemy = "*"
+"psycopg2" = "*"
 
 [dev-packages]
 
