@@ -35,5 +35,5 @@ def dbtest():
 
 @app.route('/name/<username>')
 def name(username):
-	name = Timeslot.query.filter_by(name=username).all()
-	return str(name)
+	row = table.query.filter_by(name=username).first_or_404()
+	return str(row)[1:-1] + '<hr>'
