@@ -1,1 +1,1 @@
-web: gunicorn --preload weekender:app
+web: flask db upgrade; gunicorn weekender:app --preload
