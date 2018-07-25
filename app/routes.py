@@ -20,6 +20,13 @@ def index():
 @app.route('/dbtest')
 def dbtest():
 	result = ''
+	rows = table.query.all()
+	if not rows:
+		j = table(name='jacob',friday=True,saturday=True,sunday=True)
+		g = table(name='gina',friday=False,saturday=True,sunday=True)
+		b = table(name='brandon',friday=False,saturday=False,sunday=True)
+		db.session.addall([j,g,b])
+		db.session.commit()
 	for row in table.query.all():
 		result = result + str(row)[1:-1] + '<hr>'
 	return result
