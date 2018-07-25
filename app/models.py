@@ -1,6 +1,6 @@
 from app import db
 
-class TimeSlot(db.Model):
+class Timeslot(db.Model):
 	id = db.Column(db.Integer, primary_key=True)
 	name = db.Column(db.String(64), index=True)
 	friday = db.Column(db.Boolean, unique=False, default=False)
@@ -8,4 +8,4 @@ class TimeSlot(db.Model):
 	sunday = db.Column(db.Boolean, unique=False, default=False)
 	
 	def __repr__(self):
-		return '<Name {}>'.format(self.name)
+		return '<{} | Fri: {}, Sat: {}, Sun: {}>'.format(self.name, self.friday, self.saturday, self.sunday)
